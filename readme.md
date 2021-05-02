@@ -36,6 +36,10 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 kubectl apply -f nginx-deployment.yaml
 
+## Build mock image
+
+`docker build -t mock:1.0.0 . -f ./mock/Dockerfile`
+
 ## REF
 
 You can follow [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
