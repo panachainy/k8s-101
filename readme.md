@@ -32,10 +32,6 @@
 
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
-## Deploy with config file (apply)
-
-kubectl apply -f nginx-deployment.yaml
-
 ## Build mock image
 
 `docker build -t mock:1.0.0 . -f ./mock/Dockerfile`

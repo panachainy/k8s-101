@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: mock-deployment
   labels:
-    app: nginx
+    app: mock
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: mock
   template:
     metadata:
       labels:
-        app: nginx
+        app: mock
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.16
+      - name: mock
+        image: mock:1.0.0
         ports:
         - containerPort: 80
