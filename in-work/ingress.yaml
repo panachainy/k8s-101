@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: workload-jwt
+  labels:
+    name: workload-jwt
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.kong.ingressController.ingressClass }}
+    konghq.com/plugins: kong-jwt
+    konghq.com/strip-path: "true"
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: workload-jwt
+              servicePort: 80
+            path: /nginx
