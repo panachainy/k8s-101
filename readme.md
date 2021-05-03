@@ -32,6 +32,8 @@
 
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
+> you can use flag --watch for watching some change of kube for see current result.
+
 ## [Lesson 1] How to check Deployment and Service is correct
 
 ```sh
@@ -62,3 +64,5 @@ Check at `Endpoints` on service is match to `IP` of pods.
 ## REF
 
 You can follow [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+[Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=X48VuDVv0do)
