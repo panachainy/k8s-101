@@ -61,6 +61,22 @@ kubectl get pod -o wide
 
 Check at `Endpoints` on service is match to `IP` of pods.
 
+## [Lesson 2]
+
+### Load balance
+
+Apply with `lesson-2/mongo-express.yaml`
+
+```sh
+kubectl get service
+# NAME                    TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+# kubernetes              ClusterIP      10.96.0.1        <none>        443/TCP          19h
+# mongo-express-service   LoadBalancer   10.101.207.134   <pending>     8081:30000/TCP   100m
+# mongodb-service         ClusterIP      10.97.64.40      <none>        27017/TCP        3h2m
+```
+
+`minikube service mongo-express-service`
+
 ## REF
 
 You can follow [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
