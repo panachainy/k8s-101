@@ -105,6 +105,17 @@ For try to set ingress to dashboard
 
 ref: https://github.com/kubernetes/minikube/issues/7332
 
+### Setting Host for local
+
+sudo vim /etc/hosts
+
+```txt
+127.0.0.1      localhost
+192.168.64.5   dashboard.com
+```
+
+this way work `lesson-3/old-version-dashboard-ingress.yaml`
+
 ### Log level of kubectl
 
 | Verbosity | Description                                                                                                               |
