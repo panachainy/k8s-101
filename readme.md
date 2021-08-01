@@ -63,6 +63,24 @@ Check at `Endpoints` on service is match to `IP` of pods.
 
 ## [Lesson 2]
 
+Create namespace
+
+   ```sh
+   # Config file way
+   kubectl apply -f ./lesson-2/mongo-namespace.yaml
+
+   #or
+
+   # CLI way
+   kubectl create namespace mongo
+   ```
+
+Create all k8s config file under folder lesson-2
+
+   ```sh
+   kubectl apply -f ./lesson-2 --namespace=mongo
+   ```
+
 ### Load balance
 
 Apply with `lesson-2/mongo-express.yaml`
@@ -75,7 +93,9 @@ kubectl get service
 # mongodb-service         ClusterIP      10.97.64.40      <none>        27017/TCP        3h2m
 ```
 
-`minikube service mongo-express-service`
+Open mongo-express-service
+
+   `minikube service mongo-express-service`
 
 ### Change active namespaces
 
@@ -86,6 +106,13 @@ Install
 `kubens`
 
 `kubens <your-namespace>`
+
+### Delete namespace
+
+   ```sh
+   # This deletes everything under the namespace!
+   kubectl delete namespaces mongo
+   ```
 
 ## Lesson 3
 
