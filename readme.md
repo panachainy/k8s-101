@@ -122,7 +122,9 @@ Install
 
 For try to set ingress to dashboard
 
-`minikube dashboard`
+Open k8s dashboard
+
+   `minikube dashboard`
 
 ### Setup Ingress controller for minikube
 
